@@ -1,0 +1,11 @@
+Please make sure pip3 is installed at first if not, run this command:
+
+sudo apt-get update
+sudo apt-get -y install python3-pip
+
+To run the code please run these commands in order:
+
+pip3 install -r requirements.txt
+python3 model.py
+
+then open this in your browser: http://127.0.0.1:5000/

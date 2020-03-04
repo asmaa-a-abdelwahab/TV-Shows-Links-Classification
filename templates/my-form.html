@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+	text-align: center;
+	font-family: sans-serif;
+	background: linear-gradient(#5f0458 , #8c8c8c);
+	background-attachment: fixed;
+}
+
+html, body {
+     height: 100%;
+}
+
+h1 {
+    margin-top: 90px;
+	margin-bottom: 45px;
+	color: #fff
+}
+
+h3 {
+	margin-top: 45px;
+	color: #fff
+}
+
+
+form input {
+	height: 30px;
+}
+
+form input[type="url"] {
+	width: 300px;
+	font-size: 24px
+}
+
+form input[type="url"]::placeholder {
+	padding: 0 7px;
+	font-size: 18px;
+}
+
+form input.submit {
+	padding: 17px 8px;
+    line-height: 6px;
+	font-size: 18px;
+	background-color: transparent;
+    border: 1px solid #fff;
+	color: #fff
+}
+
+form input.submit:hover {
+	background-color: #fff;
+	color: #000;
+	cursor: pointer
+}
+
+
+form input[type="url"]{
+	
+}
+</style>
+
+</head>
+<body>
+		<h1>Links Classification</h1>
+		<form action="." method="POST">
+		    <input type="url" name="link" placeholder="Enter a link to be Classified">
+		    <input class='submit' type="submit" name="my-form" value="Classify !">
+		</form>
+		<h3>
+		    {% for para in output %}
+		        <p>{{para}}</p>
+		    {% endfor %}
+		</h3>
+		{{ image or '' }}
+</body>
+</html>
